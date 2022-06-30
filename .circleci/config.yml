@@ -29,12 +29,12 @@ jobs:
       - run: npm audit
 
 workflows:
-  say-hello-workflow:
+  my_workflow:
     jobs:
       - build
       - test:
           requires:
             - build
-      - analyze
+      - analyze:
           requires:
             - test
